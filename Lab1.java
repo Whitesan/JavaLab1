@@ -5,10 +5,19 @@ public class Lab1 {
             throw new IllegalArgumentException("Exactly 3 parameters required !");
         }
         double root1,root2;
-
-        int a = Integer.parseInt(args[0]);
-        int b = Integer.parseInt(args[1]);
-        int c = Integer.parseInt(args[2]);
+        int a=0,b=0,c=0;
+        try{
+             a = Integer.parseInt(args[0]);
+             b = Integer.parseInt(args[1]);
+             c = Integer.parseInt(args[2]);
+        }
+        catch(Exception e)
+        {
+            System.out.println(e);
+            return;
+        }
+       
+        
 
         double d = (b*b)-(4*a*c);
         double sqrt = Math.sqrt(d);
